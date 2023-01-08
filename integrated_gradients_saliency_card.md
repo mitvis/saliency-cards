@@ -3,11 +3,17 @@ Integrated Gradients
 
 # Methodology
 
-Integrated Gradients was designed to overcome the 
 Provide a longer summary of what this saliency method does, its intended use, and important considerations.
-- **Developed by:** Mukund Sundararajan, Ankur Taly, and Qiqi Yan at Google.
-- **References:** {reference to the paper, demos, and/or source code}
-- **Example:** {show a visual example of the method}
+
+**Example:** Integrated Gradients saliency map (right) on an ImageNet image of a cap (left) using a Pytorch pretrained ResNet50.
+
+<img src="https://github.com/aboggust/saliency-cards/blob/integrated-gradients/integrated_gradients_example.png" alt="Example of Integrated Gradients on an image of a taxi cab. The saliency is brightest in the cab region." width="400" />
+
+**Developed by:** Mukund Sundararajan, Ankur Taly, and Qiqi Yan at Google.
+
+**References:** 
+- *Original Paper*: [Axiomatic Attribution for Deep Networks by Sundararajan et. al.](http://proceedings.mlr.press/v70/sundararajan17a/sundararajan17a.pdf)
+- *Paper on setting Integrated Gradients' baseline values*: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/)
 
 ## Determinism
 Integrated Gradients is fully deterministic, unless the users chooses a non-deterministic baseline value. 
@@ -55,9 +61,18 @@ Describe the saliency method's perceptual correspondence. Provide the results of
 ## Semantic Directness
 Describe the saliency method's semantic directness. Provide the results of the saliency method on semantic directness tests.
 
-# Citation [optional]
+# Citation
 If there is a paper or blog post introducing the model, provide the APA and Bibtex information here.
 
 **BibTeX:**
-
-**APA:**
+```
+@inproceedings{integratedgradients
+  author    = {Mukund Sundararajan and Ankur Taly and Qiqi Yan},
+  title     = {Axiomatic Attribution for Deep Networks},
+  booktitle = {Proceedings of the International Conference on Machine Learning ({ICML})},
+  volume    = {70},
+  pages     = {3319--3328},
+  publisher = {{PMLR}},
+  year      = {2017},
+}
+```
