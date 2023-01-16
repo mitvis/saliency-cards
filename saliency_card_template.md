@@ -105,7 +105,7 @@ Qualitative evaluation of the "sharpness" of the saliency.
 ## Perceptual Correspondence
 Describe the saliency method's perceptual correspondence. Provide the results of the saliency method on perceptual correspondence tests. Known perceptual correspondence tests are described blow:
 
-**[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**:
+**[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Measures the intersection of the saliency and the ground truth features.
 
 **[Luminosity Calibration](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Measures if the relative saliency for two features is equivalent to their relative impact on the model's output.
 
