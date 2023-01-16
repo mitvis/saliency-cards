@@ -108,7 +108,7 @@ The output of integrated gradients is the accumulated gradient between the basel
 
 &#129001; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients is more plausible than vanilla gradients and SmoothGrad across most architectures. It passes the benchmark 77.6% of the time.
 
-&#129000; **The Pointing Game**: Integrated gradients performed better or on par with other saliency methods. However, it performed worse than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
+&#129000; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf%20/%20file:///Users/Angie/Downloads/s42256-022-00536-x.pdf)**: Integrated gradients performed better or on par with other saliency methods. However, it performed worse than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
 
 # Citation
 ```
