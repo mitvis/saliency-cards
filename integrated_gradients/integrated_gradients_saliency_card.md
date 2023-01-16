@@ -52,11 +52,11 @@ The output of integrated gradients is the accumulated gradient between the basel
 
 ## Input Sensitivity
 
-&#129001; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy completeness.
+&#129001; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients satisfy completeness. It is computed as the difference in model output between a meaningless input and the actual input.
 
-&#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients has less infidelity than vanilla gradients and guided backprop. It is outperformed by smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
+&#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: The model's output changes more as a result of perturbing input features ranked by integrated gradients than vanilla gradients and guided backprop. The model's output changes less as a result of integrated gradients than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
 
-&#129001; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: More input consistent than vanilla gradients and SmoothGrad across most architectures.
+&#129001; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: The integrated gradients saliency stayed more consistent in response to synonymous feature swaps than vanilla gradients and SmoothGrad across most architectures.
 
 &#128997; **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Integrated gradients can fail input invariance due to its reliance on a `baseline` value. For example, when testing input invariance using a mean shift transformation, integrated gradients with a 0-vector baseline is not input invariant. In contrast, integrated gradients with the black baseline is input invariant. It is possible to select an input transformation that causes integrated gradients to fail input invariance regardless of the baseline value.
 
@@ -73,21 +73,21 @@ The output of integrated gradients is the accumulated gradient between the basel
 
 ## Label Sensitivity
 
-&#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Integrated gradients' values are sensitive to data randomization, but their visual feature maps still show input structure.
+&#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Integrated gradients' values change when the model is trained on perturbed data labels. However, visualizations of their feature maps still show input structure.
 
 &#129001; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients saliency maps differ for background and foreground objects. They outperform the model contrast score of a random saliency map.
 
 
 ## Model Sensitivity
-&#129000; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients' saliency maps randomize as the trained model becomes more randomized. However, the visual saliency maps show visual similarity between a randomized and trained model and could be misinterpreted.
+&#129000; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients' saliency maps randomize as the trained model becomes more randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted.
 
 &#129001; **[Implementation Invariance](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
 
-&#129000; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients' saliency maps randomize when the trained model's layers are randomized. However, the visual saliency maps show visual similarity between a randomized and trained model and could be misinterpreted.
+&#129000; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients' saliency maps randomize when the trained model's layers are randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted.
 
 &#129001; **[Linearity](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
 
-&#129001; **[Model Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: More model consistent than vanilla gradients and SmoothGrad across most architectures.
+&#129001; **[Model Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients stay more consistent between a model and its compressed version than vanilla gradients and SmoothGrad across most architectures.
 
 &#129000; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: At full model randomization, integrated gradients is almost as random as a random baseline.
 
@@ -102,13 +102,13 @@ The output of integrated gradients is the accumulated gradient between the basel
 &#129000; **[Visual Sharpness](https://arxiv.org/pdf/1706.03825.pdf)**: Integrated gradients are less visually coherent than a smoothed saliency method.
 
 ## Perceptual Correspondence
-&#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients performed worse than a random model.
+&#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients have less overlap with the ground truth than a random model.
 
-&#128997; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Integrated gradients performed worse than CAM and occlusion-based methods. It also performed worse than human localization in a chest x-ray setting.
+&#128997; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Integrated gradients had lower IoU with the ground truth than CAM and occlusion-based methods. It also had lower IoU with the ground truth than human localization in a chest x-ray setting.
 
-&#129001; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients is more plausible than vanilla gradients and SmoothGrad across most architectures. It passes the benchmark 77.6% of the time.
+&#129001; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients highlights human-important features more than vanilla gradients and SmoothGrad across most architectures.
 
-&#129000; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf%20/%20file:///Users/Angie/Downloads/s42256-022-00536-x.pdf)**: Integrated gradients performed better or on par with other saliency methods. However, it performed worse than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
+&#129000; **The Pointing Game**: Integrated gradients' most salient feature was in the ground truth approximately the same as amount of times as other saliency methods. However, its most salient feature was in the ground truth less than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
 
 # Citation
 ```
