@@ -17,7 +17,7 @@ Provide a longer summary of what this saliency method does, its intended use, an
 ## Determinism
 Describe the saliency method's sources of non-determinism.
 
-## Hyperparameter Independence
+## Hyperparameter Dependence
 Describe the saliency method's hyperparameters and provide suggestions on how to set them.
 
 ## Model Agnosticism

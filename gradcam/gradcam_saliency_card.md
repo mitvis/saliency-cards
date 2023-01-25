@@ -21,7 +21,7 @@ Grad-CAM computes attributions from the input to an intermediate convolutional l
 ## Determinism
 Grad-CAM is fully deterministic.
 
-## Hyperparameter Independence
+## Hyperparameter Dependence
 Grad-CAM relies on two hyperparameters: the *interpolation method* and the *convolutional layer*.
 * The interpolation method determines how to upsample the internal saliency map to the input feature dimensions. Standard upsampling methods apply.
 * Gradients are propagated from the input to the convolutional layer. The last convolutional layer is typically used, but other layers can be used to understand earlier model behavior.

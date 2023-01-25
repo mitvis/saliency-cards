@@ -31,7 +31,7 @@ Integrated gradients prevents the gradient saturation problem by capturing a lar
 ## Determinism
 Integrated gradients is fully deterministic, unless the users chooses a non-deterministic baseline value. 
 
-## Hyperparameter Independence
+## Hyperparameter Dependence
 Integrated gradients is sensitive to its `baseline` parameter. The integrated gradients algorithm computes feature importance by interpolating between a meaningless baseline input and the true input, accumulating the gradients at each step. As a result, the saliency will be zero for any features where the baseline and input feature values are the same. So, choosing an appropriate baseline input that is meaningless in the task is critical. 
 
 For example, a common practice in image classification tasks is to use a black baseline (the all-zero image) because it should be uninformative to a model trained to classify natural objects. However, a black baseline can be misleading when working with datasets where black pixels convey meaning, such as x-ray images where fractures appear as a black line through the bone. In this setting, integrated gradients with a black baseline will indicate that the fracture pixels are unimportant because the black fracture pixels have the same value as the "meaningless" baseline.
