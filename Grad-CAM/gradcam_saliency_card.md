@@ -1,5 +1,5 @@
 # **Grad-CAM** Saliency Card
-Grad-CAM is a model-dependent, gradient-based method to explain convolutional neural network (CNN) decisions.
+Grad-CAM is a model-dependent, gradient-based method to explain convolutional neural networks (CNNs).
 
 ## Methodology
 Grad-CAM identifies continuous input regions that are important to the model's output towards the target class. It computes feature importance by extracting the feature maps from an intermediate convolutional layer (typically the last convolutional layer) and weighting them by the gradient of the target output with respect to that layer. The weighted feature maps are summed to obtain a single map, passed through a ReLU function to remove negatively contributing values, and upsampled to the original input dimensions.
@@ -7,14 +7,14 @@ Grad-CAM identifies continuous input regions that are important to the model's o
 **Developed by:** Ramprasaath R. Selvaraju, Michael Cogswell, Abhishek Das, Ramakrishna Vedantam, Devi Parikh, and Dhruv Batra at Georgia Institute of Technology.
 
 **References:** 
-- *Original Paper*: [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization by Selvaraju et. al.](https://arxiv.org/pdf/1610.02391.pdf)
+- *Original Paper*: [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization](https://arxiv.org/pdf/1610.02391.pdf)
 
 **Implementations and Tutorials:**
 - *Original GitHub Repository*: [ramprs/grad-cam](https://github.com/ramprs/grad-cam/)
 - *PyTorch Integration via Captum*: [Captum Grad-CAM](https://captum.ai/api/layer.html#gradcam)
 - *Keras Integration*: [Keras Grad-CAM Tutorial](https://keras.io/examples/vision/grad_cam/)
 
-**Example:** The Grad-CAM saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `boxer` (left) using a [VGG-16](https://arxiv.org/pdf/1409.1556.pdf). This example is from: [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization by Selvaraju et. al.](https://arxiv.org/pdf/1610.02391.pdf)
+**Example:** The Grad-CAM saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `boxer` (left) using a [VGG-16](https://arxiv.org/pdf/1409.1556.pdf). This example is from [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization](https://arxiv.org/pdf/1610.02391.pdf)
 
 <img src="gradcam_example.png" alt="Example of Grad-CAM on an image of a dog. The saliency is brightest in on the dog's face." width="400" />
 
@@ -30,7 +30,7 @@ Grad-CAM relies on two hyperparameters: the `interpolation method` and the `conv
 Grad-CAM requires a differentiable model with convolutional layers and access to the gradients.
 
 ### Computational Efficiency
-Computing Grad-CAM takes on the order of 1e-2 seconds using a the [Grad-CAM Captum implementation](https://captum.ai/api/layer.html#gradcam) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
+Computing Grad-CAM takes on the order of 1e-2 seconds using the [Captum implementation](https://captum.ai/api/layer.html#gradcam) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
 
 ### Semantic Directness
 Grad-CAM outputs the positive attributions of the gradient-weighted feature maps from an internal convolutional layer. Interpreting it correctly likely requires an understanding of convolutional models and model gradients.
