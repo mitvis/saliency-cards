@@ -1,20 +1,14 @@
 # Saliency Card for **Integrated Gradients**
-Integrated gradients is a model-dependent, path-attribution saliency method that can be used for augmenting accuracy metrics, model debugging, and feature extraction.
+Integrated gradients is a model-dependent, path-attribution saliency method.
 
 # Methodology
-Integrated gradients computes feature importance by measuring global changes in the model’s output with respect to the input values. Unlike vanilla gradients that expose local variability in the model’s output in response to input feature changes, integrated gradients consider global changes by accumulating local gradients weighted by their impact on the model’s output.
-
-Integrated gradients is defined as:
-$$E_{IG}(I,c) = (I - \bar{I}) x \int_{\alpha=0}^{1}{\frac{\partial S_c(\bar{I} + \alpha (I - \bar{I}))}{\partial I}\partial \alpha}$$
-where $\bar{I}$ is the `baseline` hyperparmeter. $\alpha$ integrates from 0 to 1 which scales the input to the model from the baseline to the original input.
-
-Integrated gradients prevents the gradient saturation problem by capturing a larger range of the model's function. However, the choice of baseline can significantly impact the result. Integrating from the baseline value to a similar feature value will be unimportant even if the feature is locally important.
+Integrated gradients computes feature importance by measuring the difference in feature importance for the actual input and a meaningless `baseline` input. It approximates the integral of the gradient of the target output with respect to the input, interpolating from the `baseline` input to the actual input. 
 
 **Developed by:** Mukund Sundararajan, Ankur Taly, and Qiqi Yan at Google.
 
 **References:** 
 - *Original Paper*: [Axiomatic Attribution for Deep Networks by Sundararajan et. al.](http://proceedings.mlr.press/v70/sundararajan17a/sundararajan17a.pdf)
-- *Paper on setting Integrated Gradients' hyperparameters*: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/)
+- *Paper on Integrated Gradients Hyperparameters*: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/)
 
 **Implementations and Tutorials:**
 - *Original GitHub Repository*: [ankurtaly/Integrated-Gradients](https://github.com/ankurtaly/Integrated-Gradients)
@@ -23,30 +17,26 @@ Integrated gradients prevents the gradient saturation problem by capturing a lar
 
 **Aliases:** Path-Integrated Gradients
 
-**Example:** The integrated gradients saliency map (right) on an [ImageNet](https://www.image-net.org/) image of a `cab` (left) using a Pytorch pretrained [ResNet50](https://arxiv.org/abs/1512.03385).
+**Example:** The integrated gradients saliency map (right) on an [ImageNet](https://www.image-net.org/) image of a `cab` (left) using a Pytorch pretrained [ResNet50](https://arxiv.org/abs/1512.03385). This example is computed in `integrated_gradients_example.ipynb`.
 
 <img src="integrated_gradients_example.png" alt="Example of integrated gradients on an image of a taxi cab. The saliency is brightest in the cab region." width="400" />
 
-
 ## Determinism
-Integrated gradients is fully deterministic, unless the users chooses a non-deterministic baseline value. 
+Integrated gradients is deterministic unless the users chooses a non-deterministic `baseline` value. 
 
 ## Hyperparameter Dependence
-Integrated gradients is sensitive to its `baseline` parameter. The integrated gradients algorithm computes feature importance by interpolating between a meaningless baseline input and the true input, accumulating the gradients at each step. As a result, the saliency will be zero for any features where the baseline and input feature values are the same. So, choosing an appropriate baseline input that is meaningless in the task is critical. 
+Integrated gradients is sensitive to its `baseline` parameter. The integrated gradients algorithm computes feature importance by interpolating between a meaningless `baseline` input and the actual input, accumulating the gradients at each step. As a result, the feature importance is zero for any features where the baseline and input feature values are the same. 
 
-For example, a common practice in image classification tasks is to use a black baseline (the all-zero image) because it should be uninformative to a model trained to classify natural objects. However, a black baseline can be misleading when working with datasets where black pixels convey meaning, such as x-ray images where fractures appear as a black line through the bone. In this setting, integrated gradients with a black baseline will indicate that the fracture pixels are unimportant because the black fracture pixels have the same value as the "meaningless" baseline.
-
-Other baseline options include random noise, a blurred version of the input, the inverse of the input, the input with added noise, or the average of multiple baselines. For more information on integrated gradients' dependence on the `baseline` parameter and suggestions on how to set it, see: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/).
+The all-zero `baseline` is common; however, options include random noise, a blurred version of the input, the inverse of the input, the input with added noise, or the average of multiple baselines. For more information on the `baseline` parameter and suggestions for how to set it, see: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/)
 
 ## Model Agnosticism
 Integrated gradients requires a differentiable model with access to the gradients.
 
 ## Computational Efficiency
-Running integrated gradients take ~1 second for a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image using a [ResNet50](https://arxiv.org/abs/1512.03385) model and one NVidia G100 GPU. It would take approximately 16.6 days to extract saliency maps across the entire ImageNet dataset using these settings.
+Computing integrated gradients takes on the order of 1e-1 seconds using the [Captum implementation](https://captum.ai/api/integrated_gradients.html) on a 224x224x3 dimensional ImageNet image, ResNet50 model, and one NVidia G100 GPU.
 
 ## Semantic Directness
-The output of integrated gradients is the accumulated gradient between the baseline value and the true input value. Interpreting its output requires understanding model gradients and the `baseline` hyperparameter.
-
+The output of integrated gradients is the accumulated gradient between the `baseline` value and the true input value. Interpreting its output requires understanding model gradients and the `baseline` hyperparameter.
 
 # Sensitivity Testing
 
