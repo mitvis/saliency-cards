@@ -1,14 +1,14 @@
-# Saliency Card for **Integrated Gradients**
+# **Integrated Gradients** Saliency Card 
 Integrated gradients is a model-dependent, path-attribution saliency method.
 
-# Methodology
+## Methodology
 Integrated gradients computes feature importance by measuring the difference in feature importance for the actual input and a meaningless `baseline` input. It approximates the integral of the gradient of the target output with respect to the input, interpolating from the `baseline` input to the actual input. 
 
 **Developed by:** Mukund Sundararajan, Ankur Taly, and Qiqi Yan at Google.
 
 **References:** 
-- *Original Paper*: [Axiomatic Attribution for Deep Networks by Sundararajan et. al.](http://proceedings.mlr.press/v70/sundararajan17a/sundararajan17a.pdf)
-- *Paper on Integrated Gradients Hyperparameters*: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/)
+- *Original Paper*: [Axiomatic Attribution for Deep Networks](http://proceedings.mlr.press/v70/sundararajan17a/sundararajan17a.pdf)
+- *Paper on Integrated Gradients Hyperparameters*: [Visualizing the Impact of Feature Attribution Baselines](https://distill.pub/2020/attribution-baselines/)
 
 **Implementations and Tutorials:**
 - *Original GitHub Repository*: [ankurtaly/Integrated-Gradients](https://github.com/ankurtaly/Integrated-Gradients)
@@ -21,63 +21,63 @@ Integrated gradients computes feature importance by measuring the difference in 
 
 <img src="integrated_gradients_example.png" alt="Example of integrated gradients on an image of a taxi cab. The saliency is brightest in the cab region." width="400" />
 
-## Determinism
+### Determinism
 Integrated gradients is deterministic unless the users chooses a non-deterministic `baseline` value. 
 
-## Hyperparameter Dependence
+### Hyperparameter Dependence
 Integrated gradients is sensitive to its `baseline` parameter. The integrated gradients algorithm computes feature importance by interpolating between a meaningless `baseline` input and the actual input, accumulating the gradients at each step. As a result, the feature importance is zero for any features where the baseline and input feature values are the same. 
 
-The all-zero `baseline` is common; however, options include random noise, a blurred version of the input, the inverse of the input, the input with added noise, or the average of multiple baselines. For more information on the `baseline` parameter and suggestions for how to set it, see: [Visualizing the Impact of Feature Attribution Baselines by Sturmfels et. al.](https://distill.pub/2020/attribution-baselines/)
+The all-zero `baseline` is common; however, options include random noise, a blurred version of the input, the inverse of the input, the input with added noise, or the average of multiple baselines. For more information on the `baseline` parameter and suggestions for how to set it, see: [Visualizing the Impact of Feature Attribution Baselines](https://distill.pub/2020/attribution-baselines/)
 
-## Model Agnosticism
+### Model Agnosticism
 Integrated gradients requires a differentiable model with access to the gradients.
 
-## Computational Efficiency
+### Computational Efficiency
 Computing integrated gradients takes on the order of 1e-1 seconds using the [Captum implementation](https://captum.ai/api/integrated_gradients.html) on a 224x224x3 dimensional ImageNet image, ResNet50 model, and one NVidia G100 GPU.
 
-## Semantic Directness
+### Semantic Directness
 The output of integrated gradients is the accumulated gradient between the `baseline` value and the true input value. Interpreting its output requires understanding model gradients and the `baseline` hyperparameter.
 
-# Sensitivity Testing
+## Sensitivity Testing
 
-## Input Sensitivity
+### Input Sensitivity
 
-&#129001; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients satisfy completeness. It is computed as the difference in model output between a meaningless input and the actual input.
+&#128994; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients satisfy completeness. It is computed as the difference in model output between a meaningless input and the actual input.
 
 &#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: The model's output changes more as a result of perturbing input features ranked by integrated gradients than vanilla gradients and guided backprop. The model's output changes less as a result of integrated gradients than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
 
-&#129001; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: The integrated gradients saliency stayed more consistent in response to synonymous feature swaps than vanilla gradients and SmoothGrad across most architectures.
+&#128994; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: The integrated gradients saliency stayed more consistent in response to synonymous feature swaps than vanilla gradients and SmoothGrad across most architectures.
 
 &#128997; **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Integrated gradients can fail input invariance due to its reliance on a `baseline` value. For example, when testing input invariance using a mean shift transformation, integrated gradients with a 0-vector baseline is not input invariant. In contrast, integrated gradients with the black baseline is input invariant. It is possible to select an input transformation that causes integrated gradients to fail input invariance regardless of the baseline value.
 
-&#129001; **[Perturbation Testing](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes perturbation testing. The model's output is sensitive to iterative feature perturbation based on integrated gradients' feature rank. Integrated gradients can capture the interactions between multiple features.
+&#128994; **[Perturbation Testing](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes perturbation testing. The model's output is sensitive to iterative feature perturbation based on integrated gradients' feature rank. Integrated gradients can capture the interactions between multiple features.
 
 &#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Integrated gradients fails the ROAR test. It performs worse than a random assignment of feature importance.
 
-&#129001; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients passes robustness tests. Adding noise to an input only causes slight changes to the integrated gradient's saliency.
+&#128994; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients passes robustness tests. Adding noise to an input only causes slight changes to the integrated gradient's saliency.
 
 &#129000; **[Sensitivity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients is less sensitive to meaningless perturbations than vanilla gradients and guided backprop. It is more sensitive than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
 
-&#129001; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: Integrated gradients' is relatively stable. Its saliency maps change slightly when Gaussian noise is added to the input.
+&#128994; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: Integrated gradients' is relatively stable. Its saliency maps change slightly when Gaussian noise is added to the input.
 
 
-## Label Sensitivity
+### Label Sensitivity
 
 &#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Integrated gradients' values change when the model is trained on perturbed data labels. However, visualizations of their feature maps still show input structure.
 
-&#129001; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients saliency maps differ for background and foreground objects. They outperform the model contrast score of a random saliency map.
+&#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients saliency maps differ for background and foreground objects. They outperform the model contrast score of a random saliency map.
 
 
-## Model Sensitivity
+### Model Sensitivity
 &#129000; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients' saliency maps randomize as the trained model becomes more randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted.
 
-&#129001; **[Implementation Invariance](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
+&#128994; **[Implementation Invariance](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
 
 &#129000; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients' saliency maps randomize when the trained model's layers are randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted.
 
-&#129001; **[Linearity](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
+&#128994; **[Linearity](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
 
-&#129001; **[Model Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients stay more consistent between a model and its compressed version than vanilla gradients and SmoothGrad across most architectures.
+&#128994; **[Model Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients stay more consistent between a model and its compressed version than vanilla gradients and SmoothGrad across most architectures.
 
 &#129000; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: At full model randomization, integrated gradients is almost as random as a random baseline.
 
@@ -86,21 +86,21 @@ The output of integrated gradients is the accumulated gradient between the `base
 &#128997; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients for an InceptionV3 and DenseNet-121 trained in the same way are more dissimilar than they are similar.
 
 
-# Perceptibility Testing
+## Perceptibility Testing
 
-## Minimality
+### Minimality
 &#129000; **[Visual Sharpness](https://arxiv.org/pdf/1706.03825.pdf)**: Integrated gradients are less visually coherent than a smoothed saliency method.
 
-## Perceptual Correspondence
+### Perceptual Correspondence
 &#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients have less overlap with the ground truth than a random model.
 
 &#128997; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Integrated gradients had lower IoU with the ground truth than CAM and occlusion-based methods. It also had lower IoU with the ground truth than human localization in a chest x-ray setting.
 
-&#129001; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients highlights human-important features more than vanilla gradients and SmoothGrad across most architectures.
+&#128994; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients highlights human-important features more than vanilla gradients and SmoothGrad across most architectures.
 
-&#129000; **The Pointing Game**: Integrated gradients' most salient feature was in the ground truth approximately the same as amount of times as other saliency methods. However, its most salient feature was in the ground truth less than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
+&#129000; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Integrated gradients' most salient feature was in the ground truth approximately the same as amount of times as other saliency methods. However, its most salient feature was in the ground truth less than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
 
-# Citation
+## Citation
 ```
 @inproceedings{integratedgradients
   author    = {Mukund Sundararajan and Ankur Taly and Qiqi Yan},
