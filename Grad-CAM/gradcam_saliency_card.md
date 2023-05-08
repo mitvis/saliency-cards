@@ -14,7 +14,7 @@ Grad-CAM identifies continuous input regions that are important to the model's o
 - *PyTorch Integration via Captum*: [Captum Grad-CAM](https://captum.ai/api/layer.html#gradcam)
 - *Keras Integration*: [Keras Grad-CAM Tutorial](https://keras.io/examples/vision/grad_cam/)
 
-**Example:** The Grad-CAM saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `boxer` (left) using a [VGG-16](https://arxiv.org/pdf/1409.1556.pdf). This example is from: [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization by Selvaraju et. al.](https://arxiv.org/pdf/1610.02391.pdf).
+**Example:** The Grad-CAM saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `boxer` (left) using a [VGG-16](https://arxiv.org/pdf/1409.1556.pdf). This example is from: [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization by Selvaraju et. al.](https://arxiv.org/pdf/1610.02391.pdf)
 
 <img src="gradcam_example.png" alt="Example of Grad-CAM on an image of a dog. The saliency is brightest in on the dog's face." width="400" />
 
