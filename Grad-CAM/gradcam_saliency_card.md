@@ -1,8 +1,8 @@
-# Saliency Card for **Grad-CAM**
+# **Grad-CAM** Saliency Card
 Grad-CAM is a model-dependent, gradient-based method to explain convolutional neural network (CNN) decisions.
 
 ## Methodology
-Grad-CAM computes attributions from the input to an intermediate convolutional layer. Typically, the last convolutional layer is used. Intuitively, it comprises feature maps representing the learned features through the network. Grad-CAM weights each feature map by its gradient to uncover the important feature maps and averages the result. The weighted averaged feature maps are passed through a ReLU function to remove negative importances. Finally, the resulting saliency map is smaller than the original feature space, so the result is upsampled to the input size.
+Grad-CAM identifies continuous input regions that are important to the model's output towards the target class. It computes feature importance by extracting the feature maps from an intermediate convolutional layer (typically the last convolutional layer) and weighting them by the gradient of the target output with respect to that layer. The weighted feature maps are summed to obtain a single map, passed through a ReLU function to remove negatively contributing values, and upsampled to the original input dimensions.
 
 **Developed by:** Ramprasaath R. Selvaraju, Michael Cogswell, Abhishek Das, Ramakrishna Vedantam, Devi Parikh, and Dhruv Batra at Georgia Institute of Technology.
 
@@ -14,26 +14,26 @@ Grad-CAM computes attributions from the input to an intermediate convolutional l
 - *PyTorch Integration via Captum*: [Captum Grad-CAM](https://captum.ai/api/layer.html#gradcam)
 - *Keras Integration*: [Keras Grad-CAM Tutorial](https://keras.io/examples/vision/grad_cam/)
 
-**Example:** The Grad-CAM saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `boxer` (left) using a [VGG-16](https://arxiv.org/pdf/1409.1556.pdf).
+**Example:** The Grad-CAM saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `boxer` (left) using a [VGG-16](https://arxiv.org/pdf/1409.1556.pdf). This example is from: [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization by Selvaraju et. al.](https://arxiv.org/pdf/1610.02391.pdf).
 
 <img src="gradcam_example.png" alt="Example of Grad-CAM on an image of a dog. The saliency is brightest in on the dog's face." width="400" />
 
 ### Determinism
-Grad-CAM is fully deterministic.
+Grad-CAM is deterministic.
 
 ### Hyperparameter Dependence
-Grad-CAM relies on two hyperparameters: the *interpolation method* and the *convolutional layer*.
-* The interpolation method determines how to upsample the internal saliency map to the input feature dimensions. Standard upsampling methods apply.
-* Gradients are propagated from the input to the convolutional layer. The last convolutional layer is typically used, but other layers can be used to understand earlier model behavior.
+Grad-CAM relies on two hyperparameters: the `interpolation method` and the `convolutional layer`.
+* The `interpolation method` upsamples the feature map into the input feature dimensions.
+* The `convolutional layer` determines which feature maps to use. Typically, the last convolutional layer is used, but other layers can be used to understand earlier model behavior.
 
 ### Model Agnosticism
-As a gradient-based method, Grad-CAM requires a differentiable model with access to the gradients. It also requires the model to have convolutional layers.
+Grad-CAM requires a differentiable model with convolutional layers and access to the gradients.
 
 ### Computational Efficiency
-Running Grad-CAM take ~1 second for a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image using a [ResNet50](https://arxiv.org/abs/1512.03385) model and one NVidia G100 GPU. It would take approximately 16.6 days to extract saliency maps across the entire ImageNet dataset using these settings.
+Computing Grad-CAM takes on the order of 1e-2 seconds using a the [Grad-CAM Captum implementation](https://captum.ai/api/layer.html#gradcam) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
 
 ### Semantic Directness
-Grad-CAM's output can be described as the positive attributions of the gradient-weighted feature maps from the last convolutional layer. It likely requires an understanding of convolutional models.
+Grad-CAM outputs the positive attributions of the gradient-weighted feature maps from an internal convolutional layer. Interpreting it correctly likely requires an understanding of convolutional models and model gradients.
 
 ## Sensitivity Testing
 
@@ -45,17 +45,17 @@ Grad-CAM's output can be described as the positive attributions of the gradient-
 
 ### Label Sensitivity
 
-&#129001; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency map changes between the original model and a model trained with random permutations. Its original saliency map focuses on the main object, and its saliency map after label permutation highlights random, disconnected patches.
+&#128994; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency map changes between the original model and a model trained with random permutations. Its original saliency map focuses on the main object, and its saliency map after label permutation highlights random, disconnected patches.
 
-&#129001; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Grad-CAM's saliency map changes significantly between a model trained with object labels and a model trained with background labels. Of the saliency methods tested, it has the highest model contrast score.
+&#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Grad-CAM's saliency map changes significantly between a model trained with object labels and a model trained with background labels. Of the saliency methods tested, it has the highest model contrast score.
 
 ### Model Sensitivity
 
-&#129001; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency map changes as model weights are successively randomized. At complete randomization, the saliency looks random.
+&#128994; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency map changes as model weights are successively randomized. At complete randomization, the saliency looks random.
 
-&#129001; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency maps changes as model layers are randomized.
+&#128994; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency maps changes as model layers are randomized.
 
-&#129001; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM's saliency changes between a fully trained and fully randomized model.
+&#128994; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM's saliency changes between a fully trained and fully randomized model.
 
 &#129000; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM's saliency differs slightly between two independently initialized models trained in the same way on the same data. The saliency maps are more similar than they are different but perform worse than a segmentation model.
 
