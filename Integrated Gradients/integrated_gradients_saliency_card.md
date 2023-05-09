@@ -65,7 +65,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 ### Label Sensitivity
 
-&#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Integrated gradients' values change when the model is trained on perturbed data labels. However, visualizations of their feature maps still show input structure.
+&#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients values change when the model is trained on perturbed data labels, but the visualizations of the saliency can show input structure. Evaluated on MNIST and Fashion MNIST.
 
 &#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients saliency maps differ for background and foreground objects. They outperform the model contrast score of a random saliency map.
 
