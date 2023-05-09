@@ -50,7 +50,9 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128997; **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Integrated gradients can fail input invariance due to its reliance on a `baseline` value. For example, when testing input invariance using a mean shift transformation, integrated gradients with a 0-vector baseline is not input invariant. In contrast, integrated gradients with the black baseline is input invariant. It is possible to select an input transformation that causes integrated gradients to fail input invariance regardless of the baseline value. Input invariance was evaluated using a CNN on MNIST.
 
-&#128994; **[Perturbation Testing](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes all perturbation tests. The model's output is sensitive to iterative feature perturbation based on integrated gradients' feature rank using MNIST, CIFAR-10, ImageNet, and IMDB datasets with MLP, CNN, Inception V3, and LSTM models.
+&#129000; **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes the LeRF perturbation tests for experiments with MNIST, CIFAR-10, and IMDB datasets with MLP, CNN, and LSTM models. It achieves worse than random LeRF perturbation scores using an Inception V3 model on ImageNet. This failure is due to integrated gradients fails to correctly predict the sign of the feature importance, causing important features (with negative importance) to be removed first.
+
+&#128994; **[Perturbation Testing (MoRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes all MoRF perturbation tests. The model's output is sensitive to iterative feature perturbation based on integrated gradients' feature rank using MNIST, CIFAR-10, ImageNet, and IMDB datasets with MLP, CNN, Inception V3, and LSTM models.
 
 &#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Integrated gradients fails the ROAR test. It performs worse than a random assignment of feature importance.
 
