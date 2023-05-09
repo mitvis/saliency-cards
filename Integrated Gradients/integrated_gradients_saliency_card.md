@@ -48,7 +48,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128994; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Input consistency was evaluated using number agreement and gender agreement feature swaps using the Syneval and Winobias datasets. Integrated gradients stayed more consistent in response to synonymous feature swaps than vanilla gradients and SmoothGrad on the LSTM and QRNN models. It was outperformed by SmoothGrad using a transformer model.
 
-&#128997; **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Integrated gradients can fail input invariance due to its reliance on a `baseline` value. For example, when testing input invariance using a mean shift transformation, integrated gradients with a 0-vector baseline is not input invariant. In contrast, integrated gradients with the black baseline is input invariant. It is possible to select an input transformation that causes integrated gradients to fail input invariance regardless of the baseline value. Input invariance was evaluated using a CNN on MNIST.
+&#129000; **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Integrated gradients can fail input invariance due to its reliance on a `baseline` value. For example, when testing input invariance using a mean shift transformation, integrated gradients with a 0-vector baseline is not input invariant. In contrast, integrated gradients with the black baseline is input invariant. It is possible to select an input transformation that causes integrated gradients to fail input invariance regardless of the baseline value. Input invariance was evaluated using a CNN on MNIST.
 
 &#129000; **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes the LeRF perturbation tests for experiments with MNIST, CIFAR-10, and IMDB datasets with MLP, CNN, and LSTM models. It achieves worse than random LeRF perturbation scores using an Inception V3 model on ImageNet. This failure is due to integrated gradients fails to correctly predict the sign of the feature importance, causing important features (with negative importance) to be removed first.
 
@@ -67,7 +67,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients values change when the model is trained on perturbed data labels, but the visualizations of the saliency can show input structure. Evaluated on MNIST and Fashion MNIST.
 
-&#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients saliency maps differ for background and foreground objects. They outperform the model contrast score of a random saliency map.
+&#129000; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients achieves a better-than-random model contrast score, but performs worse than Grad-CAM and SmoothGrad. 
 
 
 ### Model Sensitivity
