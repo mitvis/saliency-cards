@@ -42,7 +42,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 ### Input Sensitivity
 
-&#128994; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients satisfy completeness. It is computed as the difference in model output between a meaningless input and the actual input.
+&#128994; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients guarantees completeness through its algorithmic definition. Summing the integrated gradients from a meaningless input to the actual input will equal the difference in the model's output between the two inputs.
 
 &#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: The model's output changes more as a result of perturbing input features ranked by integrated gradients than vanilla gradients and guided backprop. The model's output changes less as a result of integrated gradients than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
 
