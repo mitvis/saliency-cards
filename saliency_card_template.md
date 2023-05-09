@@ -35,23 +35,23 @@ Summarize the saliency method's sensitivity to changes in the input, label, and 
 ### Input Sensitivity
 Describe the saliency method's sensitivity to input changes. Provide the results of the saliency method on input sensitivity tests. Known input sensitivity tests are described below:
 
-[&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Requires the feature importance scores to sum to the difference between the model's output on the original input and the model's output on a meaningless input.
+[&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Requires the saliency scores to sum to the difference between the model's output on the original input and the model's output on a meaningless input.
 
 [&#128994; / &#129000; / &#128997;] **[Deletion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency rank. Subsequent evaluations in: https://download.arxiv.org/pdf/2201.13291v3.pdf.
 
 [&#128994; / &#129000; / &#128997;] **[Faithfulness](https://arxiv.org/pdf/1806.07538.pdf)**: Measures the change in the model's output as input features are obscured or removed based on their saliency rank.
 
-[&#128994; / &#129000; / &#128997;] **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Measures the mean squared error between the feature importances weighted by the input perturbation and the difference in the model's output on the actual input and the perturbed input.
+[&#128994; / &#129000; / &#128997;] **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Measures the mean squared error between the saliency weighted by the input perturbation and the difference in the model's output on the actual input and the perturbed input.
 
-[&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the feature importances when the input features are swapped with synonymous features.
+[&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the saliency when the input features are swapped with synonymous features.
 
 [&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference between the saliency from a model trained on the original inputs and a model trained on the original inputs with a constant shift.
 
 [&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency rank. Subsequent evaluations in: https://download.arxiv.org/pdf/2201.13291v3.pdf.
 
-[&#128994; / &#129000; / &#128997;] **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with features with the lowest importance.
+[&#128994; / &#129000; / &#128997;] **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with features with the lowest saliency.
 
-[&#128994; / &#129000; / &#128997;] **[Perturbation Testing (MoRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with the features with the highest importance.
+[&#128994; / &#129000; / &#128997;] **[Perturbation Testing (MoRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with the features with the highest saliency.
 
 [&#128994; / &#129000; / &#128997;] **[Region Perturbation](https://arxiv.org/pdf/1509.06321.pdf)**: Measures how the model's output changes as input regions are perturbed based on their saliency rank.
 
