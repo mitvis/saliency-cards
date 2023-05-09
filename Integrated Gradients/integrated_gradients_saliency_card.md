@@ -44,7 +44,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128994; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients guarantees completeness through its algorithmic definition. Summing the integrated gradients from a meaningless input to the actual input will equal the difference in the model's output between the two inputs.
 
-&#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: The model's output changes more as a result of perturbing input features ranked by integrated gradients than vanilla gradients and guided backprop. The model's output changes less as a result of integrated gradients than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
+&#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Infidelity was evaluated on MNIST, CIFAR-10, and ImageNet. On MNIST, integrated gradients outperforms vanilla gradients, vanilla gradients with SmoothGrad, guided backpropagation, and guided backpropagation with SmoothGrad. It performs worse than integrated gradients with SmoothGrad and SHAP. On CIFAR-100, integrated gradients performs worse than all other methods. On ImageNet, integrated gradients performs better than vanilla gradients, equivalently to vanilla gradients with SmoothGrad, and worse than integrated gradients with SmoothGrad, guided backpropagation, and guided backpropagation with SmoothGrad.
 
 &#128994; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: The integrated gradients saliency stayed more consistent in response to synonymous feature swaps than vanilla gradients and SmoothGrad across most architectures.
 
