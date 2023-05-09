@@ -65,7 +65,7 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 ### Minimality
 
-&#128997; **[Sparsity](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Grad-CAM's ratio between the maximum and minimum saliency values was 5.28. It performed worst out of Ablation-CAM, Grad-CAM++, RISE, and Score-CAM.
+&#129000; **[Sparsity](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: The ratio between Grad-CAM's maximum and minimum saliency values was 5.28. It had lower sparsity than  Ablation-CAM, Grad-CAM++, RISE, and Score-CAM. Evaluated on a ResNet50 model and CUB-200-2011 dataset.
 
 ### Perceptual Correspondence
 
