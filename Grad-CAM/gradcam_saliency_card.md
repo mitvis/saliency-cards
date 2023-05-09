@@ -51,15 +51,15 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 ### Model Sensitivity
 
-&#128994; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency map changes as model weights are successively randomized. At complete randomization, the saliency looks random. Evaluated on an ImageNet Inception V3.
+&#128994; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM saliency changes as model layers are successively randomized. At complete randomization, the saliency looks random. Evaluated on an ImageNet Inception V3.
 
-&#128994; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency maps changes as model layers are randomized.
+&#128994; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM saliency changes as model layers are independently randomized. At complete randomization, the saliency looks random. Evaluated on an ImageNet Inception V3.
 
-&#128994; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM's saliency changes between a fully trained and fully randomized model.
+&#128994; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM saliency changes between a fully trained and fully randomized model.
 
-&#129000; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM's saliency differs slightly between two independently initialized models trained in the same way on the same data. The saliency maps are more similar than they are different but perform worse than a segmentation model.
+&#129000; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM saliency differs slightly between two independently initialized models trained in the same way on the same data. The saliency maps are more similar than they are different but perform worse than a segmentation model.
 
-&#129000; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM's saliency differs slightly between two models with different architectures trained on the same data. The saliency maps are more similar than they are different but perform worse than a segmentation model.
+&#129000; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM saliency differs slightly between two models with different architectures trained on the same data. The saliency maps are more similar than they are different but perform worse than a segmentation model.
 
 ## Perceptibility Testing
 
