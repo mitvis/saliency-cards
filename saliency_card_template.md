@@ -35,7 +35,7 @@ Summarize the saliency method's sensitivity to changes in the input, label, and 
 ### Input Sensitivity
 Describe the saliency method's sensitivity to input changes. Provide the results of the saliency method on input sensitivity tests. Known input sensitivity tests are described below:
 
-[&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Measures if the saliency feature values sum to the difference between the model's output on the original input and the model's output on a meaningless input.
+[&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Requires the feature importance scores to sum to the difference between the model's output on the original input and the model's output on a meaningless input.
 
 [&#128994; / &#129000; / &#128997;] **[Deletion and Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency rank.
 
