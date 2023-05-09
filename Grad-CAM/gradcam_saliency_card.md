@@ -47,7 +47,7 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 &#128994; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM saliency values change between the original model and a model trained with random permutations.  Evaluated on MNIST and Fashion MNIST using CNN and MLP models.
 
-&#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Grad-CAM's saliency map changes significantly between a model trained with object labels and a model trained with background labels. Of the saliency methods tested, it has the highest model contrast score.
+&#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Grad-CAM acheives the highest model contrast score compared to vanilla gradients, SmoothGrad, integrated gradients, integrated gradients with SmoothGrad, guided backpropagation, and guided Grad-CAM. Evaluated on the BAM image dataset.
 
 ### Model Sensitivity
 
