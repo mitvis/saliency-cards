@@ -49,7 +49,9 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency rank.
 
-[&#128994; / &#129000; / &#128997;] **[Perturbation Testing](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero based on their saliency rank. 
+[&#128994; / &#129000; / &#128997;] **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with features with the lowest importance.
+
+[&#128994; / &#129000; / &#128997;] **[Perturbation Testing (MoRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with the features with the highest importance.
 
 [&#128994; / &#129000; / &#128997;] **[Region Perturbation](https://arxiv.org/pdf/1509.06321.pdf)**: Measure how the model's output changes as input regions are perturbed based on their saliency rank.
 
