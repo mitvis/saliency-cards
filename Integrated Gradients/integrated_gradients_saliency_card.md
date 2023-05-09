@@ -67,7 +67,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients values change when the model is trained on perturbed data labels, but the visualizations of the saliency can show input structure. Evaluated on MNIST and Fashion MNIST.
 
-&#129000; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients achieves a better-than-random model contrast score, but performs worse than Grad-CAM and SmoothGrad. 
+&#129000; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients achieves a better-than-random model contrast score, but performs worse than Grad-CAM and SmoothGrad. It is evaluated on the BAM image dataset.
 
 
 ### Model Sensitivity
