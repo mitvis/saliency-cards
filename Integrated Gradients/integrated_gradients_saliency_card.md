@@ -73,7 +73,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 ### Model Sensitivity
 &#129000; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients saliency values randomize as the trained model becomes more randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted. Evaluted on an ImageNet Inception V3 model.
 
-&#128994; **[Implementation Invariance](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients guarantees implementation invariance through its algorithmic definition. It will produce the same saliency values for functionally equivalent models.
+&#128994; **[Implementation Invariance](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients guarantees implementation invariance through its algorithmic definition. It will produce equivalent saliency values for functionally equivalent models.
 
 &#129000; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients saliency values randomize when the trained model's layers are randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted. Evaluted on an ImageNet Inception V3 model.
 
