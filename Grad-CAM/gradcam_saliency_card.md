@@ -71,7 +71,7 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 &#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM fails the localization utility test. Its saliency values have less overlap with the ground truth than a random model. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
-&#129000; **[Luminosity Calibration](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Grad-CAM's luminosity calibration is similar to other methods tested: Ablation CAM, Grad-CAM++, and RISE. There is no clear correlation between the features' impact and their relative saliency values.
+&#128997; **[Luminosity Calibration](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Grad-CAM salieny values reflect the impact on class score as much as random values. Evaluated on a ResNet50 model and CUB-200-2011 dataset.
 
 &#129000; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Grad-CAM's saliency overlaps the most with the ground truth pathologies but performs worse than a human benchmark.
 
