@@ -107,9 +107,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 @inproceedings{integratedgradients
   author    = {Mukund Sundararajan and Ankur Taly and Qiqi Yan},
   title     = {Axiomatic Attribution for Deep Networks},
-  booktitle = {Proceedings of the International Conference on Machine Learning ({ICML})},
-  volume    = {70},
-  pages     = {3319--3328},
+  booktitle = {International Conference on Machine Learning ({ICML})},
   publisher = {{PMLR}},
   year      = {2017},
 }
