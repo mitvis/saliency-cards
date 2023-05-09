@@ -56,9 +56,9 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Integrated gradients fails the ROAR test. It performs worse than a random assignment of feature importance when applied to a ResNet50 trained on ImageNet.
 
-&#129000; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients is somewhat sensitive to random noise. Adding noise to an input causes slight changes to the integrated gradient's saliency. However, it performs better than vanilla gradients, input x gradient, LRP, Occlusion, and LIME when applied to CNN models and MNIST data.
+&#129000; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients is somewhat sensitive to random noise. Adding noise to an input causes slight changes to the integrated gradients' saliency. However, it performs better than vanilla gradients, input x gradient, LRP, Occlusion, and LIME when applied to CNN models and MNIST data.
 
-&#129000; **[Sensitivity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients is less sensitive to meaningless perturbations than vanilla gradients and guided backprop. It is more sensitive than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP.
+&#129000; **[Sensitivity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients is less sensitive to meaningless perturbations than vanilla gradients and guided backprop. It is more sensitive than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP. Integrated gradients' sensitivity was evaluated on MNIST, CIFAR-10, and ImageNet.
 
 &#128994; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: Integrated gradients' is relatively stable. Its saliency maps change slightly when Gaussian noise is added to the input.
 
