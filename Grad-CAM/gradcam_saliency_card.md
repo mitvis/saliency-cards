@@ -55,7 +55,7 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 &#128994; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM saliency changes as model layers are independently randomized. At complete randomization, the saliency looks random. Evaluated on an ImageNet Inception V3.
 
-&#128994; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM saliency changes between a fully trained and fully randomized model.
+&#128994; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM saliency is dependent on model parameters and significantly differs between a fully trained and fully randomized model. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
 &#129000; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Grad-CAM saliency differs slightly between two independently initialized models trained in the same way on the same data. The saliency maps are more similar than they are different but perform worse than a segmentation model.
 
