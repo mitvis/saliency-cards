@@ -37,7 +37,7 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Requires the feature importance scores to sum to the difference between the model's output on the original input and the model's output on a meaningless input.
 
-[&#128994; / &#129000; / &#128997;] **[Deletion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency rank.
+[&#128994; / &#129000; / &#128997;] **[Deletion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency rank. Subsequent evaluations in: https://download.arxiv.org/pdf/2201.13291v3.pdf.
 
 [&#128994; / &#129000; / &#128997;] **[Faithfulness](https://arxiv.org/pdf/1806.07538.pdf)**: Measures the change in the model's output as input features are obscured or removed based on their saliency rank.
 
@@ -47,15 +47,13 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference between the saliency from a model trained on the original inputs and a model trained on the original inputs with a constant shift.
 
-[&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency rank.
+[&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency rank. Subsequent evaluations in: https://download.arxiv.org/pdf/2201.13291v3.pdf.
 
 [&#128994; / &#129000; / &#128997;] **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with features with the lowest importance.
 
 [&#128994; / &#129000; / &#128997;] **[Perturbation Testing (MoRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero starting with the features with the highest importance.
 
 [&#128994; / &#129000; / &#128997;] **[Region Perturbation](https://arxiv.org/pdf/1509.06321.pdf)**: Measures how the model's output changes as input regions are perturbed based on their saliency rank.
-
-[&#128994; / &#129000; / &#128997;] **[Reliability](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Measures the change in the model's output as input features are progressively masked or revealed based on saliency rank.
 
 [&#128994; / &#129000; / &#128997;] **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Measures the difference in model behavior between a model trained on the original inputs and a model trained on only the salient features from the original model.
 
