@@ -43,7 +43,7 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Measures the mean squared error between the feature importances weighted by the input perturbation and the difference in the model's output on the actual input and the perturbed input.
 
-[&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the saliency when input features are swapped with synonymous features.
+[&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the feature importances when the input features are swapped with synonymous features.
 
 [&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference between the saliency from a model trained on the original inputs and a model trained on the original inputs with added noise.
 
