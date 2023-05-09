@@ -41,7 +41,7 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Faithfulness](https://arxiv.org/pdf/1806.07538.pdf)**: Measures the change in the model's output as input features are obscured or removed based on their saliency rank.
 
-[&#128994; / &#129000; / &#128997;] **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Measures the mean squared error of the difference in the model's output after perturbing input features based on their saliency rank.
+[&#128994; / &#129000; / &#128997;] **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Measures the mean squared error between the feature importances weighted by the input perturbation and the difference in the model's output on the actual input and the perturbed input.
 
 [&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the saliency when input features are swapped with synonymous features.
 
