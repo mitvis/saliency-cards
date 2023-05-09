@@ -102,7 +102,7 @@ Describe the saliency method's minimality. Provide the results of the saliency m
 [&#128994; / &#129000; / &#128997;] **[Sparsity](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Measures the ratio between the maximum and minimum saliency values. High sparsity means the saliency's values are narrow and focused.
 
 [&#128994; / &#129000; / &#128997;] **[Visual Sharpening](https://arxiv.org/pdf/1706.03825.pdf)**: 
-Qualitative evaluation of the "sharpness" of the saliency.
+Human evaluation of the "sharpness" of the saliency.
 
 ### Perceptual Correspondence
 Describe the saliency method's perceptual correspondence. Provide the results of the saliency method on perceptual correspondence tests. Known perceptual correspondence tests are described blow:
