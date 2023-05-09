@@ -85,7 +85,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128997; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients fails the repeatability test. Its saliency values for two models trained in the same way are more dissimilar than they are similar. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
-&#128997; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients for an InceptionV3 and DenseNet-121 trained in the same way are more dissimilar than they are similar.
+&#128997; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients fails the reproducibility test. Its saliency values for two models with different architectures trained in the same way and on the same data are more dissimilar than they are similar. Evaluated using Inception V3 and DenseNet-121 on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
 
 ## Perceptibility Testing
