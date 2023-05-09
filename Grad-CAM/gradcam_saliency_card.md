@@ -43,8 +43,6 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 &#129000; **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: The model's output changes as input features are iteratively added based on their Grad-CAM saliency rank. When evaluated on ResNet50 and VGG16 ImageNet models, Grad-CAM performs better than sliding window saliency but worse than RISE. Grad-CAM performs worse LIME using the ResNet50 model and on-par with LIME using the VGG16. In [subsequent evaluations](https://download.arxiv.org/pdf/2201.13291v3.pdf) on ResNet50 and CUB-200-2011, Grad-CAM performs worse than RISE, Ablation CAM, Grad-CAM++, and Score-CAM.
 
-&#129000; **[Reliability](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: The model's output changes as input features are progressively masked or revealed based on their Grad-CAM rank. Grad-CAM performs similarly to other methods like RISE and Grad-CAM++.
-
 ### Label Sensitivity
 
 &#128994; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Grad-CAM's saliency map changes between the original model and a model trained with random permutations. Its original saliency map focuses on the main object, and its saliency map after label permutation highlights random, disconnected patches.
