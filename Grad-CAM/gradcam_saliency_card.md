@@ -73,7 +73,9 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 &#128997; **[Luminosity Calibration](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Grad-CAM salieny values reflect the impact on class score as much as random values. Evaluated on a ResNet50 model and CUB-200-2011 dataset.
 
-&#129000; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Grad-CAM's saliency overlaps the most with the ground truth pathologies as compared to other saliency methods (integrated gradients, Grad-CAM++, Eigen-CAM, DeepLift, LRP, and Occlusion) but performs worse than a human benchmark. Evaluated using CNNs on CheXpert chest x-ray images.
+&#129000; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Grad-CAM saliency overlaps the most with the ground truth pathologies as compared to other saliency methods (integrated gradients, Grad-CAM++, Eigen-CAM, DeepLift, LRP, and Occlusion) but performs worse than a human benchmark. Evaluated using CNNs on CheXpert chest x-ray images.
+
+&#129000; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Grad-CAM's most salient feature was in the ground truth approximately the same as amount as other saliency methods. However, its most salient feature was in the ground truth less than human localization. Evaluated using CNNs on CheXpert chest x-ray images by [Benchmarking saliency methods for chest X-ray interpretation](https://www.nature.com/articles/s42256-022-00536-x).
 
 ## Citation
 
