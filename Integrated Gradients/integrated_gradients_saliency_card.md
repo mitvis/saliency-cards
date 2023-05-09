@@ -96,7 +96,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 ### Perceptual Correspondence
 &#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients fails the localization utility test. IIts saliency values have less overlap with the ground truth than a random model. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
-&#128997; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Integrated gradients had lower IoU with the ground truth than CAM and occlusion-based methods. It also had lower IoU with the ground truth than human localization in a chest x-ray setting.
+&#128997; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Integrated gradients had lower IoU with the ground truth than CAM and occlusion-based methods. It also had lower IoU with the ground truth than human localization in a chest x-ray setting. Evaluated using CNNs on CheXpert chest x-ray images.
 
 &#128994; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients highlights human-important features more than vanilla gradients and SmoothGrad across most architectures.
 
