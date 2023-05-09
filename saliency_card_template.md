@@ -70,7 +70,7 @@ Describe the saliency method's sensitivity to label changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Measures the change in saliency between a model trained on the original labels and a model trained with random label permutations.
 
-[&#128994; / &#129000; / &#128997;] **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Measures the change in saliency between two models trained on the same image dataset where one model is trained with the image's object labels and the other is trained on the image's scene labels.
+[&#128994; / &#129000; / &#128997;] **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Measures the change in saliency between two models trained on controlled variants of the dataset where feature importances are known.
 
 ### Model Sensitivity
 Describe the saliency method's sensitivity to model changes. Provide the results of the saliency method on model sensitivity tests. Known model sensitivity tests are described below:
