@@ -90,7 +90,7 @@ Describe the saliency method's sensitivity to model changes. Provide the results
 [&#128994; / &#129000; / &#128997;] **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Measures the difference in saliency between two models with different architectures trained on the same data.
 
 ## Perceptibility Testing
-Summarize perceptibility considerations of the saliency method that may impact how it is perceived by an end user. 
+Summarize perceptibility considerations of the saliency method that may impact how it is perceived by an end user. Use &#128994; to indicate the saliency method passed the evaluation, &#128997; to indicate it failed the evaluation, and &#129000; to indicate the evaluation was inconclusive.
 
 ### Minimality
 Describe the saliency method's minimality. Provide the results of the saliency method on minimality tests. Known minimality tests are described blow:
