@@ -91,7 +91,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 ## Perceptibility Testing
 
 ### Minimality
-&#129000; **[Visual Sharpness](https://arxiv.org/pdf/1706.03825.pdf)**: Integrated gradients are less visually coherent than a smoothed saliency method.
+&#129000; **[Visual Sharpness](https://arxiv.org/pdf/1706.03825.pdf)**: Integrated gradients are less visually coherent than a smoothed saliency method. Evaluated on an ImageNet Inception V3 and MNIST CNN.
 
 ### Perceptual Correspondence
 &#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients have less overlap with the ground truth than a random model.
