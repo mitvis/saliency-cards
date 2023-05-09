@@ -54,7 +54,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128994; **[Perturbation Testing (MoRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Integrated gradients passes all MoRF perturbation tests. The model's output is sensitive to iterative feature perturbation based on integrated gradients' feature rank using MNIST, CIFAR-10, ImageNet, and IMDB datasets with MLP, CNN, Inception V3, and LSTM models.
 
-&#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Integrated gradients fails the ROAR test. It performs worse than a random assignment of feature importance.
+&#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Integrated gradients fails the ROAR test. It performs worse than a random assignment of feature importance when applied to a ResNet50 trained on ImageNet.
 
 &#128994; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients passes robustness tests. Adding noise to an input only causes slight changes to the integrated gradient's saliency.
 
