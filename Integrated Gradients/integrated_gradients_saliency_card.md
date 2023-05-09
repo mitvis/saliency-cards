@@ -67,7 +67,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#129000; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Integrated gradients changes appropriately when the model is trained on perturbed data labels. However, its visualizations can misleadingly show input structure. Evaluated on MNIST and Fashion MNIST.
 
-&#129000; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients achieves a better-than-random model contrast score but performs worse than Grad-CAM and SmoothGrad. Evaluated on the BAM image dataset.
+&#128994; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Integrated gradients achieves a better-than-random model contrast score but performs worse than Grad-CAM and SmoothGrad. Evaluated on the BAM image dataset.
 
 
 ### Model Sensitivity
@@ -91,7 +91,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 ## Perceptibility Testing
 
 ### Minimality
-&#129000; **[Visual Sharpness](https://arxiv.org/pdf/1706.03825.pdf)**: Integrated gradients are less visually coherent than SmoothGrad saliency methods. Evaluated on an ImageNet Inception V3 and MNIST CNN.
+&#128997; **[Visual Sharpness](https://arxiv.org/pdf/1706.03825.pdf)**: Integrated gradients are less visually coherent than SmoothGrad saliency methods. Evaluated on an ImageNet Inception V3 and MNIST CNN.
 
 ### Perceptual Correspondence
 &#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients fails localization utility. Its saliency values overlap less with the ground truth than a random model. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
