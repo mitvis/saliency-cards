@@ -79,7 +79,7 @@ Describe the saliency method's sensitivity to model changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Implementation Invariance](https://arxiv.org/pdf/1703.01365.pdf)**: Tests if the saliency is identical for two models that are functionally equivalent.
 
-[&#128994; / &#129000; / &#128997;] **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Measures how saliency change as single layers of the model are randomized.
+[&#128994; / &#129000; / &#128997;] **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Measures how saliency changes as single layers of the model are randomized one at a time.
 
 [&#128994; / &#129000; / &#128997;] **[Linearity](https://arxiv.org/pdf/1703.01365.pdf)**: Tests that the saliency of two composed models is a weighted sum of the saliency for each model.
 
