@@ -115,7 +115,7 @@ Describe the saliency method's perceptual correspondence. Provide the results of
 
 [&#128994; / &#129000; / &#128997;] **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Measures if the saliency highlights features known to be important to humans.
 
-[&#128994; / &#129000; / &#128997;] **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf) / [Hit Rate](https://www.nature.com/articles/s42256-022-00536-x)**: Measures if the highest saliency value is in the set of ground truth features.
+[&#128994; / &#129000; / &#128997;] **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Measures if the highest saliency value is in the set of ground truth features. Subsequent evaluations in: https://download.arxiv.org/pdf/2201.13291v3.pdf.
 
 
 ## Citation [optional]
