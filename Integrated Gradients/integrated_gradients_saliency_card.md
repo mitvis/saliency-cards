@@ -77,7 +77,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#129000; **[Independent Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: The integrated gradients saliency values randomize when the trained model's layers are randomized. However, the saliency maps show visual similarity between a randomized and trained model and could be misinterpreted. Evaluted on an ImageNet Inception V3 model.
 
-&#128994; **[Linearity](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients was designed to satisfy implementation invariance.
+&#128994; **[Linearity](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients guarantees linearity through its algorithmic definition.
 
 &#128994; **[Model Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients stay more consistent between a model and its compressed version than vanilla gradients and SmoothGrad across most architectures.
 
