@@ -83,7 +83,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#129000; **[Model Weight Randomization](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: At full model randomization, integrated gradients is almost as random as a random baseline. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
-&#128997; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients for two random initializations of the same model are more dissimilar than they are similar.
+&#128997; **[Repeatability](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients fails the repeatability test. Its saliency values for two models trained in the same way are more dissimilar than they are similar. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
 &#128997; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Integrated gradients for an InceptionV3 and DenseNet-121 trained in the same way are more dissimilar than they are similar.
 
