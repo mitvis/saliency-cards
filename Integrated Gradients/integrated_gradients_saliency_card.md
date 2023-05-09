@@ -98,7 +98,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128997; **[Mean IoU](https://www.nature.com/articles/s42256-022-00536-x)**: Integrated gradients had lower IoU with the ground truth than CAM and occlusion-based methods. It also had lower IoU with the ground truth than human localization in a chest x-ray setting. Evaluated using CNNs on CheXpert chest x-ray images.
 
-&#128994; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients highlights human-important features more than vanilla gradients and SmoothGrad across most architectures.
+&#128994; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients highlights human-important features more often than vanilla gradients on LSTM, QRNN, and Transformer architectures. It performs on-par with SmoothGrad. Evaluated on number agreement and agreement tasks using the Syneval and Winobias datasets. 
 
 &#129000; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Integrated gradients' most salient feature was in the ground truth approximately the same as amount of times as other saliency methods. However, its most salient feature was in the ground truth less than human localization in a chest x-ray setting. Tested by: [Benchmarking saliency methods for chest X-ray interpretation by Saporta et al.](https://www.nature.com/articles/s42256-022-00536-x)
 
