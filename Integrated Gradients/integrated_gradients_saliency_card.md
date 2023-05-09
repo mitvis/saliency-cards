@@ -60,7 +60,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#129000; **[Sensitivity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients is less sensitive to meaningless perturbations than vanilla gradients and guided backprop. It is more sensitive than smoothed saliency methods (vanilla gradients with SmoothGrad, integrated gradients with SmoothGrad, and guided backprop with SmoothGrad) and SHAP. Integrated gradients' sensitivity was evaluated on MNIST, CIFAR-10, and ImageNet.
 
-&#128994; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: Integrated gradients' is relatively stable. Its saliency maps change slightly when Gaussian noise is added to the input.
+&#128994; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: Integrated gradients is fairly stable. It's ouputs change minially in response to adversarial perturbations. In evaluations on MNIST, it performs better than LIME and on-par with vanilla gradients, input x gradient, LRP, and Occlusion.
 
 
 ### Label Sensitivity
