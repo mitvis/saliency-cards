@@ -37,7 +37,7 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Requires the feature importance scores to sum to the difference between the model's output on the original input and the model's output on a meaningless input.
 
-[&#128994; / &#129000; / &#128997;] **[Deletion and Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency rank.
+[&#128994; / &#129000; / &#128997;] **[Deletion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency rank.
 
 [&#128994; / &#129000; / &#128997;] **[Faithfulness](https://arxiv.org/pdf/1806.07538.pdf)**: Measures the change in the model's output as input features are obscured or removed based on their saliency rank.
 
@@ -46,6 +46,8 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 [&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the saliency when input features are swapped with synonymous features.
 
 [&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference between the saliency from a model trained on the original inputs and a model trained on the original inputs with added noise.
+
+[&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency rank.
 
 [&#128994; / &#129000; / &#128997;] **[Perturbation Testing](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero based on their saliency rank. 
 
