@@ -45,7 +45,7 @@ Describe the saliency method's sensitivity to input changes. Provide the results
 
 [&#128994; / &#129000; / &#128997;] **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Measures the consistency of the feature importances when the input features are swapped with synonymous features.
 
-[&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference between the saliency from a model trained on the original inputs and a model trained on the original inputs with added noise.
+[&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference between the saliency from a model trained on the original inputs and a model trained on the original inputs with a constant shift.
 
 [&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency rank.
 
