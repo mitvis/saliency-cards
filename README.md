@@ -15,10 +15,10 @@ If you have new evaluation metrics or the results of existing evaluation metrics
 
 ## Citation
 ```
-@article{boggust2022beyond,
-  title={Beyond Faithfulness: A Framework to Characterize and Compare Saliency Methods},
+@inproceedings{saliencycards,
+  title={{Saliency Cards: A Framework to Characterize and Compare Saliency Methods}},
   author={Boggust, Angie and Suresh, Harini and Strobelt, Hendrik and Guttag, John V and Satyanarayan, Arvind},
-  journal={arXiv preprint arXiv:2206.02958},
-  year={2022}
+  booktitle = {ACM Conference on Fairness, Accountability, and Transparency (FAccT)},
+  year={2023}
 }
 ```
