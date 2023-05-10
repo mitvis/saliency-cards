@@ -81,12 +81,7 @@ Grad-CAM outputs the positive attributions of the gradient-weighted feature maps
 
 ```
 @inproceedings{grad-cam,
-  author    = {Ramprasaath R. Selvaraju and
-               Michael Cogswell and
-               Abhishek Das and
-               Ramakrishna Vedantam and
-               Devi Parikh and
-               Dhruv Batra},
+  author    = {Ramprasaath R. Selvaraju and Michael Cogswell and Abhishek Das and Ramakrishna Vedantam and Devi Parikh and Dhruv Batra},
   title     = {Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization},
   booktitle = {International Conference on Computer Vision ({ICCV})},
   publisher = {{IEEE} Computer Society},
