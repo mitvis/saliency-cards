@@ -37,3 +37,14 @@ def imagenet_normalize():
     return transforms.Compose([
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), 
     ])
+
+def melanoma_transform(test=False, normalize=True):
+    """Return the transformations for melanoma data."""
+    transforms_list = [transforms.Resize((224, 224))]
+    if test is False:
+        transforms_list.append(transforms.RandomVerticalFlip())
+        transforms_list.append(transforms.RandomHorizontalFlip())
+    transforms_list.append(transforms.ToTensor())
+    if normalize is True:
+        transforms_list.append(transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)))
+    return transforms.Compose(transforms_list)
