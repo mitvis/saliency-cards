@@ -2,7 +2,7 @@
 
 In the saliency card attribute examples, we use a variety of saliency methods. To have a consistent interface across their public implementations, we provide a wrapper.
 
-This repository contains implementations of common saliency methods. See the [example notebook](https://github.com/mitvis/saliency-cards/blob/main/attribute_examples/saliency_method_examples.ipynb)!
+This directory contains implementations of common saliency methods. See the [example notebook](https://github.com/mitvis/saliency-cards/blob/main/attribute_examples/saliency_method_examples.ipynb)!
 
 Implemented saliency methods:
 * **Vanilla Gradients** ([paper 1](https://www.researchgate.net/profile/Aaron_Courville/publication/265022827_Visualizing_Higher-Layer_Features_of_a_Deep_Network/links/53ff82b00cf24c81027da530.pdf) | [paper 2](https://arxiv.org/pdf/1312.6034.pdf) | implemented via [Captum](https://captum.ai/api/saliency.html))
