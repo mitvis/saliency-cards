@@ -2,7 +2,7 @@
 
 Saliency cards break saliency methods into 10 user-centric attributes that are important when choosing a saliency method. 
 
-In this repo, we provide examples for eight of the attributes (shown in Figure 3 of [Saliency Cards: A Framework to Characterize and Compare Saliency Methods](https://arxiv.org/abs/2206.02958)). We do not include examples of semantic directness (because it is purely descriptive) and input sensitivity (see [Saliency Cards]((https://arxiv.org/abs/2206.02958)) for an example).
+In this directory, we provide examples for eight of the attributes (shown in Figure 3 of [Saliency Cards: A Framework to Characterize and Compare Saliency Methods](https://arxiv.org/abs/2206.02958)). We do not include examples of semantic directness (because it is purely descriptive) and input sensitivity (see [Saliency Cards]((https://arxiv.org/abs/2206.02958)) for an example).
 
 ## Saliency Card Attributes
 ### Methodology --- *how the saliency is calculated*
