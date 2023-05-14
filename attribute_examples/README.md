@@ -25,7 +25,7 @@ represents the complexity of this abstraction.
 * **Input Sensitivity**: measures if a saliency method accurately reflects the model’s sensitivity to transformations in the input space
 
 * **Label Sensitivity**:
-measures the saliency method’s response to changes to that target label.
+measures the saliency method’s response to changes to the target label.
 
 * **Model Sensitivity**:
 measures if the output of a saliency method is sensitive to meaningful changes to the model parameters.
