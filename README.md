@@ -18,8 +18,8 @@ If you have developed a new saliency method or want to contribute a saliency car
 ## Contributing New Evaluations
 If you have new evaluation metrics or the results of existing evaluations on untested saliency methods, add the metric and a short summary to the appropriate section of `saliency_cards/saliency_card_template.md`. Add the evaluation results to the saliency cards of any methods you evaluated.
 
-## Updating Saliency Cards
-We expect saliency cards to change as more saliency methods are documented and evaluated. If you have ideas for better ways to categorize saliency methods, such as new attributes or different categorizations, let's discuss them!
+## Updating The Saliency Card Framework
+We expect saliency cards to change as more saliency methods are documented and evaluated. If you have ideas for better ways to categorize saliency methods, such as new attributes or different categorizations, let's discuss them! Open an issue, describe your suggestion and reasoning, and tag it with `saliency card framework`.
 
 ## Citation
 For more information about saliency cards, check out [Saliency Cards: A Framework to Characterize and Compare Saliency Methods](https://arxiv.org/abs/2206.02958).
