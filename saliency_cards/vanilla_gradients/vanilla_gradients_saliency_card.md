@@ -48,7 +48,7 @@ Vanilla gradients saliency represents the magnitude of the change in the modelâ€
 
 &#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Vanilla gradients fails the ROAR test. It performs worse than random saliency when applied to an ImageNet ResNet50.
 
-&#129000; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Vanilla gradients is somewhat sensitive to random noise, which causes slight changes to the saliency despite little change to the model's output.
+&#129000; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Vanilla gradients is somewhat sensitive to random noise, which causes slight changes to the saliency despite little change to the model's output. Evaluated using an MNIST CNN.
 
 &#129000; **[Sensitivity](https://arxiv.org/pdf/1901.09392.pdf)**: Vanilla gradients' sensitivity is inconclusive. It generally performs worse than SHAP, integrated gradients, and smoothed saliency methods and performs on par with guided backpropagation across MNIST, ImageNet, and CIFAR-10.
 

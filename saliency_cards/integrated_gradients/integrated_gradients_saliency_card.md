@@ -56,7 +56,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128997; **[ROAR](https://proceedings.neurips.cc/paper/2019/file/fe4b8556000d0f0cae99daa5c5c5a410-Paper.pdf)**: Integrated gradients fails the ROAR test. It performs worse than random saliency when applied to an ImageNet ResNet50.
 
-&#129000; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients is somewhat sensitive to random noise, which causes slight changes to the saliency. However, integrated gradients outperforms vanilla gradients, input x gradient, LRP, Occlusion, and LIME. Evaluated on MNIST CNNs. 
+&#129000; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: Integrated gradients is somewhat sensitive to random noise, which causes slight changes to the saliency. However, integrated gradients outperforms vanilla gradients, input x gradient, LRP, Occlusion, and LIME. Evaluated using an MNIST CNN.
 
 &#129000; **[Sensitivity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients' sensitivity tests are inconclusive. It is less sensitive to meaningless perturbations than vanilla gradients and guided backpropagation but more sensitive than SmoothGrad applied to vanilla gradients, integrated gradients, and guided backpropagation. Evaluated on MNIST, CIFAR-10, and ImageNet. 
 
