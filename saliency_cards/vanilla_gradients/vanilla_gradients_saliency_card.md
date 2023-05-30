@@ -13,7 +13,7 @@ Vanilla gradients computes saliency as the gradient of the model's output with r
 
 **Aliases:** gradients, saliency, vanilla saliency
 
-**Example:** The vanilla gradients saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `cord` (left) using a [Inception v3](https://arxiv.org/pdf/1512.00567.pdf). This example is from [Sanity Checks for Saliency Maps](https://arxiv.org/pdf/1810.03292.pdf).
+**Example:** The vanilla gradients saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `corn` (left) using a [Inception v3](https://arxiv.org/pdf/1512.00567.pdf). This example is from [Sanity Checks for Saliency Maps](https://arxiv.org/pdf/1810.03292.pdf).
 
 <img src="vanilla_gradients_example.png" alt="Example of vanilla gradients on an image of a woman eating corn. The saliency is brightest around the corn cob and woman's mouth." width="400" />
 
