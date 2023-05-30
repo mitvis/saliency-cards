@@ -9,7 +9,7 @@ Vanilla gradients computes saliency as the gradient of the model's output with r
 - *Original Paper 2*: [Visualizing Higher-Layer Features of a Deep Network](https://www.researchgate.net/profile/Aaron-Courville/publication/265022827_Visualizing_Higher-Layer_Features_of_a_Deep_Network/links/53ff82b00cf24c81027da530/Visualizing-Higher-Layer-Features-of-a-Deep-Network.pdf)
 
 **Implementations and Tutorials:**
-- *[Captum Implementation](https://captum.ai/api/saliency.html)
+- [Captum Implementation](https://captum.ai/api/saliency.html)
 
 **Aliases:** gradients, saliency, vanilla saliency
 
@@ -55,14 +55,12 @@ Vanilla gradients saliency represents the magnitude of the change in the modelâ€
 &#128994; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: Vanilla gradients is relatively stable, and its outputs change minimally in response to adversarial perturbations. It performs better than LIME and equivalently to integrated gradients, input x gradients, LRP, and Occlusion. Evaluated on MNIST.
 
 ### Label Sensitivity
-Provide the results of the saliency method on label sensitivity tests:
 
 &#128994; **[Data Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Vanilla gradients changes appropriately as the model is progressively randomized. Evaluated on MNIST and Fashion MNIST.
 
 &#129000; **[Model Contrast Score](https://arxiv.org/pdf/1907.09701.pdf)**: Vanilla gradients achieves a better-than-random model contrast score but performs worse than Grad-CAM and SmoothGrad. Evaluated on the BAM image dataset.
 
 ### Model Sensitivity
-Provide the results of the saliency method on model sensitivity tests:
 
 &#128994; **[Cascading Model Parameter Randomization](https://arxiv.org/pdf/1810.03292.pdf)**: Vanilla gradients changes appropriately as the model is progressively randomized. Evaluated an ImageNet Inception V3.
 
@@ -79,26 +77,22 @@ Provide the results of the saliency method on model sensitivity tests:
 &#128997; **[Reproducibility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Vanilla gradients fails reproducibility. Its saliency values for two different architectures trained in the same way are more dissimilar than similar. Evaluated using Inception V3 and DenseNet-121 on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
 ## Perceptibility Testing
-Report results of the relevant perceptibility evaluations. Use &#128994; to indicate the saliency method passed, &#128997; to indicate it failed, and &#129000; to indicate the evaluation was inconclusive.
 
 ### Minimality
-Provide the results of the saliency method on minimality tests:
 
 &#128997; **[Visual Sharpening](https://arxiv.org/pdf/1706.03825.pdf)**: 
 Vanilla gradients appear noisy and are less visually coherent than Guided Backpropagation and SmoothGrad saliency methods. Evaluated on an ImageNet Inception V3 and MNIST CNN.
 
 ### Perceptual Correspondence
-Provide the results of the saliency method on perceptual correspondence tests:
 
 &#128997; **[Localization Utility](https://pubs.rsna.org/doi/10.1148/ryai.2021200267)**: Vanilla gradients fails localization utility. Its saliency values overlap less with the ground truth than a random model. Evaluated on SIIM-ACR Pneumothorax and RSNA Pneumonia medical images.
 
 &#129000; **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Vanilla gradients plausibility tests are inconclusive. It highlights human-important features more often than random for transformer and QRNN models, but performs worse than random for LSTM models and worse than integrated gradients and SmoothGrad across the majority of settings. Evaluated on number and gender agreement tasks using the Syneval and Winobias datasets.
 
-&#128994; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Vanilla gradients highest saliency value is in the set of ground truth features more than other the baseline center feature, Deconvnet, LRP, and CAM. Evaluted on VOC07 and COCO using CNN, VGG16, and GoogleNet models.
+&#128994; **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Vanilla gradients highest saliency value is in the set of ground truth features more than other the baseline center feature, Deconvnet, LRP, and CAM. Evaluated on VOC07 and COCO using CNN, VGG16, and GoogleNet models.
 
 
-## Citation [optional]
-Provide a citation to the paper or blog post that introduces the method.
+## Citation
 
 **BibTeX:**
 ```
