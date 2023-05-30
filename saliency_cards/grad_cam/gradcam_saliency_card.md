@@ -30,7 +30,7 @@ Grad-CAM relies on two hyperparameters: the `interpolation method` and the `conv
 Grad-CAM requires a differentiable model with convolutional layers and access to the gradients.
 
 ### Computational Efficiency
-Computing Grad-CAM takes on the order of 1e-2 seconds using the [Captum implementation](https://captum.ai/api/layer.html#gradcam) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
+Computing Grad-CAM takes on the order of $1\mathrm{e}{-2}$ seconds using the [Captum implementation](https://captum.ai/api/layer.html#gradcam) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
 
 ### Semantic Directness
 Grad-CAM outputs the positive attributions of the gradient-weighted feature maps from an internal convolutional layer. Interpreting it requires an understanding of convolutional models and model gradients.

@@ -27,7 +27,7 @@ Vanilla gradients does not have any hyperparameters.
 Vanilla gradients requires a differentiable model with access to the gradients.
 
 ### Computational Efficiency
-Computing vanilla gradients takes on the order of 1e-2 seconds using the [Captum implementation](https://captum.ai/api/saliency.html) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
+Computing vanilla gradients takes on the order of $1\mathrm{e}{-2}$ seconds using the [Captum implementation](https://captum.ai/api/saliency.html) on a 224x224x3 dimensional [ImageNet](https://www.image-net.org/) image, [ResNet50](https://arxiv.org/abs/1512.03385) model, and one NVidia G100 GPU.
 
 ### Semantic Directness
 Vanilla gradients saliency represents the magnitude of the change in the model’s output given a small change to an input feature.

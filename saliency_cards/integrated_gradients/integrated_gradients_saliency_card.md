@@ -33,7 +33,7 @@ The all-zero `baseline` is common; however, other options include random noise, 
 Integrated gradients requires a differentiable model with access to the gradients.
 
 ### Computational Efficiency
-Computing integrated gradients takes on the order of 1e-1 seconds using the [Captum implementation](https://captum.ai/api/integrated_gradients.html) on a 224x224x3 dimensional ImageNet image, ResNet50 model, and one NVidia G100 GPU.
+Computing integrated gradients takes on the order of $1\mathrm{e}{-1}$ seconds using the [Captum implementation](https://captum.ai/api/integrated_gradients.html) on a 224x224x3 dimensional ImageNet image, ResNet50 model, and one NVidia G100 GPU.
 
 ### Semantic Directness
 The output of integrated gradients is the accumulated gradient between the `baseline` input and the actual input. Interpreting its output requires understanding model gradients and the impact of the `baseline` hyperparameter.
