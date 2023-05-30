@@ -4,6 +4,8 @@ XRAI is a region-based saliency method extension.
 ## Methodology
 XRAI converts feature-based saliency methods into region-based saliency. It over-segments the input into many regions, computes saliency using another saliency method (e.g., integrated gradients and guided integrated gradients), and sums the saliency within each region.
 
+**Developed by:** Andrei Kapishnikov, Tolga Bolukbasi, Fernanda Viégas, Michael Terry at Google.
+
 **References:**
 - *Original Paper*: [XRAI: Better Attributions Through Regions](https://arxiv.org/pdf/1906.02825.pdf)
 - *Blog Post*: [Google PAIR Blog on XRAI](https://pair-code.github.io/saliency/#xrai)
