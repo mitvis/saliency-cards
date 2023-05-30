@@ -45,7 +45,7 @@ The output of LIME is the positively contributing features learned by a surrogat
 
 &#128997; **[Robustness](https://arxiv.org/pdf/1806.08049.pdf)**: LIME is highly sensitive to meaningless perturbations. Its superpixel-based saliency take up large feature regions and change drastically as the input is perturbed. Evaluated using an MNIST CNN.
 
-[&#128994; / &#129000; / &#128997;] **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: LIME is highly sensitive to adversarial perturbations and is more sensitive than vanilla gradients, input x gradient, integrated gradients, and occlusion. Evaluated using an MNIST CNN.
+&#128997; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: LIME is highly sensitive to adversarial perturbations and is more sensitive than vanilla gradients, input x gradient, integrated gradients, and occlusion. Evaluated using an MNIST CNN.
 
 ### Label Sensitivity
 
