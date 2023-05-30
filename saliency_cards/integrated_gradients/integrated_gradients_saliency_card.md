@@ -44,7 +44,7 @@ The output of integrated gradients is the accumulated gradient between the `base
 
 &#128994; **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Integrated gradients algorithmically guarantees completeness. The sum of the integrated gradients will equal the difference in the model's output between the actual and `baseline` inputs.
 
-&#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients' infidelity is inconclusive. Integrated gradients outperforms vanilla gradients on MNIST and ImageNet, performs equivalently to vanilla gradients on CIFAR-100, and performs worse than vanilla gradients with SmoothGrad, guided backpropagation, guided backpropagation with SmoothGrad, and integrated gradients with SmoothGrad across all three datasets.
+&#129000; **[Infidelity](https://arxiv.org/pdf/1901.09392.pdf)**: Integrated gradients' infidelity is inconclusive. Integrated gradients outperforms vanilla gradients on MNIST and ImageNet, performs equivalently to vanilla gradients on CIFAR-10, and performs worse than vanilla gradients with SmoothGrad, guided backpropagation, guided backpropagation with SmoothGrad, and integrated gradients with SmoothGrad across all three datasets.
 
 &#129000; **[Input Consistency](https://arxiv.org/pdf/2104.05824.pdf)**: Integrated gradients' input consistency is inconclusive. It was more consistent than vanilla gradients and SmoothGrad using the LSTM and QRNN models but less consistent than SmoothGrad using a transformer model. Evaluated using number and gender agreement feature swaps with the Syneval and Winobias datasets.
 
