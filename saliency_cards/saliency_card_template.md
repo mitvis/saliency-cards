@@ -37,8 +37,7 @@ Provide the results of the saliency method on input sensitivity tests:
 
 [&#128994; / &#129000; / &#128997;] **[Completeness](https://arxiv.org/pdf/1703.01365.pdf)**: Requires the sum of the saliency to equal the difference between the model's output on the original input and the model's output on a meaningless input.
 
-[&#128994; / &#129000; / &#128997;] **[Deletion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency ranking. Additional evaluations in: [Metrics for saliency map evaluation of deep
-learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
+[&#128994; / &#129000; / &#128997;] **[Deletion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively removed based on their saliency ranking. Additional evaluations in: [Metrics for saliency map evaluation of deep learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
 
 [&#128994; / &#129000; / &#128997;] **[Faithfulness](https://arxiv.org/pdf/1806.07538.pdf)**: Measures the change in the model's output as input features are obscured or removed based on their saliency rank.
 
@@ -48,8 +47,7 @@ learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
 
 [&#128994; / &#129000; / &#128997;] **[Input Invariance](https://arxiv.org/pdf/1711.00867.pdf)**: Measures the difference in saliency between a model trained on the original data and a model trained on the data with a constant shift.
 
-[&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency ranking. Additional evaluations in: [Metrics for saliency map evaluation of deep
-learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
+[&#128994; / &#129000; / &#128997;] **[Insertion](https://arxiv.org/pdf/1806.07421.pdf)**: Measures the change in the model's output as input features are iteratively added based on their saliency ranking. Additional evaluations in: [Metrics for saliency map evaluation of deep learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
 
 [&#128994; / &#129000; / &#128997;] **[Perturbation Testing (LeRF)](http://www.interpretable-ml.org/nips2017workshop/papers/02.pdf)**: Measures the change in the model's output as input features are iteratively set to zero, starting with the least saliency features.
 
@@ -103,8 +101,7 @@ Provide the results of the saliency method on minimality tests:
 
 [&#128994; / &#129000; / &#128997;] **[Sparsity](https://download.arxiv.org/pdf/2201.13291v3.pdf)**: Measures the ratio between the maximum and minimum saliency values. High sparsity means the saliency's values are narrow and focused.
 
-[&#128994; / &#129000; / &#128997;] **[Visual Sharpening](https://arxiv.org/pdf/1706.03825.pdf)**: 
-Human evaluation of the "sharpness" of the saliency.
+[&#128994; / &#129000; / &#128997;] **[Visual Sharpening](https://arxiv.org/pdf/1706.03825.pdf)**: Human evaluation of the "sharpness" of the saliency.
 
 ### Perceptual Correspondence
 Provide the results of the saliency method on perceptual correspondence tests:
@@ -117,8 +114,7 @@ Provide the results of the saliency method on perceptual correspondence tests:
 
 [&#128994; / &#129000; / &#128997;] **[Plausibility](https://arxiv.org/pdf/2104.05824.pdf)**: Measures if the saliency highlights features known to be important to humans.
 
-[&#128994; / &#129000; / &#128997;] **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Measures if the highest saliency value is in the set of ground truth features. Additional evaluations in: [Metrics for saliency map evaluation of deep
-learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
+[&#128994; / &#129000; / &#128997;] **[The Pointing Game](https://arxiv.org/pdf/1608.00507.pdf)**: Measures if the highest saliency value is in the set of ground truth features. Additional evaluations in: [Metrics for saliency map evaluation of deep learning explanation methods](https://download.arxiv.org/pdf/2201.13291v3.pdf).
 
 
 ## Citation [optional]
