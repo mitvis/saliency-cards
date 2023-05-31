@@ -10,7 +10,15 @@ Saliency cards are living artifacts that will evolve to support the rapid growth
 *We accept pull requests!*
 
 ## Exploring Saliency Methods
-To explore saliency cards for existing saliency methods, see currently documented methods in `saliency_cards/`. To learn more about the attributes used to describe saliency methods, see the [Saliency Cards paper](https://arxiv.org/abs/2206.02958) and examples of the attributes in `attribute_examples/`.
+To explore saliency cards for existing saliency methods, see currently documented methods in `saliency_cards`. Each saliency method's card is in `{saliency_method}/{saliency_method)_saliency_card.md`. We currently have saliency cards for:
+* Vanilla Gradients
+* Integrated Gradients
+* Grad-CAM
+* SmoothGrad
+* XRAI
+* LIME
+
+To learn more about the attributes used to describe saliency methods, see the [Saliency Cards paper](https://arxiv.org/abs/2206.02958) and examples of the attributes in `attribute_examples/`.
 
 ## Contributing New Saliency Cards
 If you have developed a new saliency method or want to contribute a saliency card for an existing saliency method, please copy the `saliency_cards/saliency_card_template.md` and fill out each appropriate section. Name the saliency card `saliency_cards/{method name]}_saliency_card.md` and store it in its own folder in `saliency_cards/`.
