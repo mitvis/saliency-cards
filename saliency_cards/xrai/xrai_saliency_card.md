@@ -13,7 +13,7 @@ XRAI converts feature-based saliency methods into region-based saliency. It over
 **Implementations and Tutorials:**
 - [Google PAIR Implementation](https://github.com/pair-code/saliency)
 
-**Example:** The vanilla gradients saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `samoyed` (left) using a [Inception v3](https://arxiv.org/pdf/1512.00567.pdf). This example is from [XRAI: Better Attributions Through Regions](https://arxiv.org/pdf/1906.02825.pdf).
+**Example:** The XRAI saliency map (right) on an [ImageNet](https://www.image-net.org/) image for the class `samoyed` (left) using a [Inception v3](https://arxiv.org/pdf/1512.00567.pdf). This example is from the [Google PAIR Blog on XRAI](https://pair-code.github.io/saliency/#xrai).
 
 <img src="xrai_example.png" alt="Example of XRAI on an image of a samoyed puppy. The saliency is highlights the dog." width="400" />
 
