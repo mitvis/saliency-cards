@@ -11,12 +11,12 @@ Saliency cards are living artifacts that will evolve to support the rapid growth
 
 ## Exploring Saliency Methods
 To explore saliency cards for existing saliency methods, see currently documented methods in `saliency_cards`. Each saliency method's card is in `{saliency_method}/{saliency_method)_saliency_card.md`. We currently have saliency cards for:
-* Vanilla Gradients
-* Integrated Gradients
-* Grad-CAM
-* SmoothGrad
-* XRAI
-* LIME
+* [Vanilla Gradients](https://github.com/mitvis/saliency-cards/blob/main/saliency_cards/vanilla_gradients/vanilla_gradients_saliency_card.md)
+* [Integrated Gradients](https://github.com/mitvis/saliency-cards/blob/main/saliency_cards/integrated_gradients/integrated_gradients_saliency_card.md)
+* [Grad-CAM](https://github.com/mitvis/saliency-cards/blob/main/saliency_cards/grad_cam/gradcam_saliency_card.md)
+* [SmoothGrad](https://github.com/mitvis/saliency-cards/blob/main/saliency_cards/smoothgrad/smoothgrad_saliency_card.md)
+* [XRAI](https://github.com/mitvis/saliency-cards/blob/main/saliency_cards/xrai/xrai_saliency_card.md)
+* [LIME](https://github.com/mitvis/saliency-cards/blob/main/saliency_cards/lime/lime_saliency_card.md)
 
 To learn more about the attributes used to describe saliency methods, see the [Saliency Cards paper](https://arxiv.org/abs/2206.02958) and examples of the attributes in `attribute_examples/`.
 
