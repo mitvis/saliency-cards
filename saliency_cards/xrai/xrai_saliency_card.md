@@ -36,8 +36,10 @@ XRAI represents the importance of input regions. Its semantic directness depends
 ## Sensitivity Testing
 
 ### Input Sensitivity
+Not tested for input sensitivity.
 
 ### Label Sensitivity
+Not tested for label sensitivity.
 
 ### Model Sensitivity
 
@@ -50,6 +52,7 @@ XRAI represents the importance of input regions. Its semantic directness depends
 ## Perceptibility Testing
 
 ### Minimality
+Not tested for minimality.
 
 ### Perceptual Correspondence
 
