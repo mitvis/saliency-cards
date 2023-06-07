@@ -48,14 +48,18 @@ The output of LIME is the positively contributing features learned by a surrogat
 &#128997; **[Stability](https://arxiv.org/pdf/1806.07538.pdf)**: LIME is highly sensitive to adversarial perturbations and is more sensitive than vanilla gradients, input x gradient, integrated gradients, and occlusion. Evaluated using an MNIST CNN.
 
 ### Label Sensitivity
+Not tested for label sensitvity.
 
 ### Model Sensitivity
+Not tested for model sensitvity.
 
 ## Perceptibility Testing
 
 ### Minimality
+Not tested for minimality.
 
 ### Perceptual Correspondence
+Not tested for perceptual correspondence.
 
 ## Citation
 
