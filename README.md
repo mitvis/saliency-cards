@@ -26,6 +26,8 @@ If you have developed a new saliency method or want to contribute a saliency car
 ## Contributing New Evaluations
 If you have new evaluation metrics or the results of existing evaluations on untested saliency methods, add the metric and a short summary to the appropriate section of `saliency_cards/saliency_card_template.md`. Add the evaluation results to the saliency cards of any methods you evaluated.
 
+*A great place to start:* If you are interested in contributing, an easy way to make an impact is to run existing evaluations on evaluated saliency methods. For instance, XRAI has not been tested on any input sensitivity tests. Running existing input sensitivity tests on XRAI and reporting the results in its saliency card will help characterize its behavior for future saliency method users.
+
 ## Updating The Saliency Card Framework
 We expect saliency cards to change as more saliency methods are documented and evaluated. If you have ideas for better ways to categorize saliency methods, such as new attributes or different categorizations, let's discuss them! Open an issue, describe your suggestion and reasoning, and tag it with `saliency card framework`.
 
