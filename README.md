@@ -7,7 +7,7 @@ This repo contains a [saliency card template](https://github.com/mitvis/saliency
 
 Saliency cards are living artifacts that will evolve to support the rapid growth of saliency method research. This repository is designed as a centralized location for saliency method documentation. As new saliency methods and evaluation techniques are developed, saliency cards can be added and updated.
 
-*We accept pull requests!*
+**We accept pull requests!**
 
 ## Exploring Saliency Methods
 To explore saliency cards for existing saliency methods, see currently documented methods in `saliency_cards`. Each saliency method's card is in `{saliency_method}/{saliency_method)_saliency_card.md`. We currently have saliency cards for:
@@ -26,7 +26,7 @@ If you have developed a new saliency method or want to contribute a saliency car
 ## Contributing New Evaluations
 If you have new evaluation metrics or the results of existing evaluations on untested saliency methods, add the metric and a short summary to the appropriate section of `saliency_cards/saliency_card_template.md`. Add the evaluation results to the saliency cards of any methods you evaluated.
 
-*A great place to start:* If you are interested in contributing, an easy way to make an impact is to run existing evaluations on evaluated saliency methods. For instance, XRAI has not been tested on any input sensitivity tests. Running existing input sensitivity tests on XRAI and reporting the results in its saliency card will help characterize its behavior for future saliency method users. [Issues](https://github.com/mitvis/saliency-cards/issues) contains a number of methods with missing evaluations.
+**A great place to start:** If you are interested in contributing, an easy way to make an impact is to run existing evaluations on evaluated saliency methods. For instance, XRAI has not been tested on any input sensitivity tests. Running existing input sensitivity tests on XRAI and reporting the results in its saliency card will help characterize its behavior for future saliency method users. [Issues](https://github.com/mitvis/saliency-cards/issues) contains a number of methods with missing evaluations.
 
 ## Updating The Saliency Card Framework
 We expect saliency cards to change as more saliency methods are documented and evaluated. If you have ideas for better ways to categorize saliency methods, such as new attributes or different categorizations, let's discuss them! Open an issue, describe your suggestion and reasoning, and tag it with `saliency card framework`.
